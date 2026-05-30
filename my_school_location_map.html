@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_41c9ffe967c3c84e5dd98edbbf86fe7a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_41c9ffe967c3c84e5dd98edbbf86fe7a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_41c9ffe967c3c84e5dd98edbbf86fe7a = L.map(
+                "map_41c9ffe967c3c84e5dd98edbbf86fe7a",
+                {
+                    center: [13.731345241490342, 100.781958923896],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 18,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5621901bb4b6225de910b3a37bd20915 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_5621901bb4b6225de910b3a37bd20915.addTo(map_41c9ffe967c3c84e5dd98edbbf86fe7a);
+        
+    
+            var tile_layer_09fc0615bcb0cb956b8d3b4ed4b98449 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_09fc0615bcb0cb956b8d3b4ed4b98449.addTo(map_41c9ffe967c3c84e5dd98edbbf86fe7a);
+        
+    
+            var tile_layer_7c539366608a7f24c56fddd676b5be6d = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_7c539366608a7f24c56fddd676b5be6d.addTo(map_41c9ffe967c3c84e5dd98edbbf86fe7a);
+        
+    
+            var tile_layer_3d711175199633ecc6d5f2b077aad493 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Esri",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_3d711175199633ecc6d5f2b077aad493.addTo(map_41c9ffe967c3c84e5dd98edbbf86fe7a);
+        
+    
+            var marker_4c121c3e4805d99732aa7ca1d23b4fbf = L.marker(
+                [13.731345241490342, 100.781958923896],
+                {
+}
+            ).addTo(map_41c9ffe967c3c84e5dd98edbbf86fe7a);
+        
+    
+            var icon_32af37947e2adc1b9754761c477f819a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_16dcf09540c7705070ab8013fbc7f613 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_806f72fd3f187fda47381183e458425a = $(`<div id="html_806f72fd3f187fda47381183e458425a" style="width: 100.0%; height: 100.0%;">สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</div>`)[0];
+                popup_16dcf09540c7705070ab8013fbc7f613.setContent(html_806f72fd3f187fda47381183e458425a);
+            
+        
+
+        marker_4c121c3e4805d99732aa7ca1d23b4fbf.bindPopup(popup_16dcf09540c7705070ab8013fbc7f613)
+        ;
+
+        
+    
+    
+            marker_4c121c3e4805d99732aa7ca1d23b4fbf.bindTooltip(
+                `<div>
+                     คลิกเลย!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4c121c3e4805d99732aa7ca1d23b4fbf.setIcon(icon_32af37947e2adc1b9754761c477f819a);
+            
+    
+            var marker_a329f0d4b901505380b5415c39705c43 = L.marker(
+                [13.730682668686628, 100.77229955225282],
+                {
+}
+            ).addTo(map_41c9ffe967c3c84e5dd98edbbf86fe7a);
+        
+    
+            var icon_15cea8bd02da8ab37e757f4705b31d04 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "futbol",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1d819544887e2329e31190c562c96d9b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3e2976890e91a356914ab63f6bcd26d1 = $(`<div id="html_3e2976890e91a356914ab63f6bcd26d1" style="width: 100.0%; height: 100.0%;">สนามกีฬา KMITL</div>`)[0];
+                popup_1d819544887e2329e31190c562c96d9b.setContent(html_3e2976890e91a356914ab63f6bcd26d1);
+            
+        
+
+        marker_a329f0d4b901505380b5415c39705c43.bindPopup(popup_1d819544887e2329e31190c562c96d9b)
+        ;
+
+        
+    
+    
+            marker_a329f0d4b901505380b5415c39705c43.bindTooltip(
+                `<div>
+                     คลิกเลย!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a329f0d4b901505380b5415c39705c43.setIcon(icon_15cea8bd02da8ab37e757f4705b31d04);
+            
+    
+            var marker_dedc44c7b87552d8d4ee1e754e6de7a5 = L.marker(
+                [13.727505299001855, 100.77615294901197],
+                {
+}
+            ).addTo(map_41c9ffe967c3c84e5dd98edbbf86fe7a);
+        
+    
+            var icon_94ae85e9baf29a85844d49210b9414c1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_02f2c2d827ac7a10f60601e598f2f832 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_40439934c1b35b89c3f5228b4081a8fc = $(`<div id="html_40439934c1b35b89c3f5228b4081a8fc" style="width: 100.0%; height: 100.0%;">ตึกภาควิชาโทรคมนาคม</div>`)[0];
+                popup_02f2c2d827ac7a10f60601e598f2f832.setContent(html_40439934c1b35b89c3f5228b4081a8fc);
+            
+        
+
+        marker_dedc44c7b87552d8d4ee1e754e6de7a5.bindPopup(popup_02f2c2d827ac7a10f60601e598f2f832)
+        ;
+
+        
+    
+    
+            marker_dedc44c7b87552d8d4ee1e754e6de7a5.bindTooltip(
+                `<div>
+                     คลิกเลย!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dedc44c7b87552d8d4ee1e754e6de7a5.setIcon(icon_94ae85e9baf29a85844d49210b9414c1);
+            
+    
+            var marker_b00fda48aca94d572f44d0b62f1fe760 = L.marker(
+                [13.72759405811499, 100.7723059222489],
+                {
+}
+            ).addTo(map_41c9ffe967c3c84e5dd98edbbf86fe7a);
+        
+    
+            var icon_f492f230624c75d2134a8bda775ee669 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ef0ffaf6a3b05e1d386388fc8d40c16b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d142b168b48e423504aa6969edfcf03e = $(`<div id="html_d142b168b48e423504aa6969edfcf03e" style="width: 100.0%; height: 100.0%;">ตึกโหล</div>`)[0];
+                popup_ef0ffaf6a3b05e1d386388fc8d40c16b.setContent(html_d142b168b48e423504aa6969edfcf03e);
+            
+        
+
+        marker_b00fda48aca94d572f44d0b62f1fe760.bindPopup(popup_ef0ffaf6a3b05e1d386388fc8d40c16b)
+        ;
+
+        
+    
+    
+            marker_b00fda48aca94d572f44d0b62f1fe760.bindTooltip(
+                `<div>
+                     คลิกเลย!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b00fda48aca94d572f44d0b62f1fe760.setIcon(icon_f492f230624c75d2134a8bda775ee669);
+            
+    
+            var marker_79e782545a2f94fa782493ae50db516b = L.marker(
+                [13.726405080766067, 100.77615035459745],
+                {
+}
+            ).addTo(map_41c9ffe967c3c84e5dd98edbbf86fe7a);
+        
+    
+            var icon_68dfcbbc3c5f783f4fe9bf6b8a095cf1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0a2928d74b8775ab963ff81b9a4abb6a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_34a5ae776eb8b2562280f8549cf77def = $(`<div id="html_34a5ae776eb8b2562280f8549cf77def" style="width: 100.0%; height: 100.0%;">ร้านป้าแอ๋ว ขายทุกอย่างบนโลก</div>`)[0];
+                popup_0a2928d74b8775ab963ff81b9a4abb6a.setContent(html_34a5ae776eb8b2562280f8549cf77def);
+            
+        
+
+        marker_79e782545a2f94fa782493ae50db516b.bindPopup(popup_0a2928d74b8775ab963ff81b9a4abb6a)
+        ;
+
+        
+    
+    
+            marker_79e782545a2f94fa782493ae50db516b.bindTooltip(
+                `<div>
+                     คลิกเลย!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_79e782545a2f94fa782493ae50db516b.setIcon(icon_68dfcbbc3c5f783f4fe9bf6b8a095cf1);
+            
+    
+            var marker_879a42e996953cfb122bca874c69da51 = L.marker(
+                [13.728290247372517, 100.7828637219655],
+                {
+}
+            ).addTo(map_41c9ffe967c3c84e5dd98edbbf86fe7a);
+        
+    
+            var icon_5eec03e1b0b9a2751e8610edb62473ff = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "pink",
+  "iconColor": "white",
+  "icon": "train",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2f8b2f3dd9ae78e617ae0b753914f9c9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e193c66ec0922972ebe84ffba8b486c1 = $(`<div id="html_e193c66ec0922972ebe84ffba8b486c1" style="width: 100.0%; height: 100.0%;">สถานีรถไฟหัวตะเข้</div>`)[0];
+                popup_2f8b2f3dd9ae78e617ae0b753914f9c9.setContent(html_e193c66ec0922972ebe84ffba8b486c1);
+            
+        
+
+        marker_879a42e996953cfb122bca874c69da51.bindPopup(popup_2f8b2f3dd9ae78e617ae0b753914f9c9)
+        ;
+
+        
+    
+    
+            marker_879a42e996953cfb122bca874c69da51.bindTooltip(
+                `<div>
+                     คลิกเลย!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_879a42e996953cfb122bca874c69da51.setIcon(icon_5eec03e1b0b9a2751e8610edb62473ff);
+            
+    
+            var layer_control_b2b97ce84fa7f92bff464036b1615461_layers = {
+                base_layers : {
+                    "\u0e41\u0e1c\u0e19\u0e17\u0e35\u0e48\u0e16\u0e19\u0e19\u0e1b\u0e01\u0e15\u0e34" : tile_layer_5621901bb4b6225de910b3a37bd20915,
+                    "\u0e41\u0e1c\u0e19\u0e17\u0e35\u0e48\u0e2a\u0e35\u0e02\u0e32\u0e27" : tile_layer_09fc0615bcb0cb956b8d3b4ed4b98449,
+                    "\u0e41\u0e1c\u0e19\u0e17\u0e35\u0e48\u0e2a\u0e35\u0e14\u0e33" : tile_layer_7c539366608a7f24c56fddd676b5be6d,
+                    "\u0e20\u0e32\u0e1e\u0e14\u0e32\u0e27\u0e40\u0e17\u0e35\u0e22\u0e21 (Esri)" : tile_layer_3d711175199633ecc6d5f2b077aad493,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_b2b97ce84fa7f92bff464036b1615461 = L.control.layers(
+                layer_control_b2b97ce84fa7f92bff464036b1615461_layers.base_layers,
+                layer_control_b2b97ce84fa7f92bff464036b1615461_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_41c9ffe967c3c84e5dd98edbbf86fe7a);
+
+        
+</script>
+</html>
